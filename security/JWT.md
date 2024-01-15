@@ -1,2 +1,2 @@
-##JWT(Json Web Token)란?
+JWT(Json Web Token)란?
 
