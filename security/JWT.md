@@ -2,14 +2,14 @@
 > JWT도 사용해보고 싶었기에 공부해볼까?
 
 
-## JWT(Json Web Token)란?<br>
+## JWT(Json Web Token) 란?<br>
 - 인증에 필요한 정보를 암호화시킨 토큰
 - JSON 객체를 사용하여 데이터 전달
 - RESTful API와 같은 Stateless 환경에서 데이터를 주고받을 수 있음
 - 웹 표준을 따르기 때문에 대부분의 언어가 지원
 <br><br>
 
-## JWT(Json Web Token)구조<br>
+## JWT(Json Web Token) 구조<br>
 ![JWT구조](https://github.com/duho-kim/study/assets/155808974/1dfd7bf8-441e-44b7-b954-85ac4c5dd937)
 *- JWT.io 사이트 캡쳐*
 
@@ -40,6 +40,17 @@
   - Registered나 Public에 포함되지 않는 항목이어야 한다
   
 ### (3) Signature
-- payload에 저장된 값이 위변조 되었는지 확인할 때 사용
+- 서버 측에서 관리하는 비밀키가 유출되지 않는 이상 복호화할 수 없어서, payload에 저장된 값이 위변조 되었는지 확인할 때 사용
 - header와 payload의 base64 인코딩값을 secrect값과 함께 해쉬값을 만들어냄(비밀코드)
 
+## JWT(Json Web Token) 장단점<br>
+
+### 장점
+- Stateless
+- 확장성이 뛰어나다(서버를 여러대 사용해도 토큰만 있으면 인증 가능)
+  
+### 단점
+- 이미 발급된 JWT를 만료시킬 방법이 없다
+- 길이가 길어 인증이 필요한 요청이 많으면 서버 자원낭비 발생
+- 유효기간이 끝나기 전 악의적인 탈취자에 의해 정보 유출 가능성 <br>
+  AccessToken 만료시간은 짧게, RefreshToken을 이용하여 AccessToken 재발급 받는 형식으로 보완
