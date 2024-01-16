@@ -10,7 +10,7 @@
 <br><br>
 
 ## JWT(Json Web Token) 구조<br>
-![JWT구조](https://github.com/duho-kim/study/assets/155808974/1dfd7bf8-441e-44b7-b954-85ac4c5dd937)
+![JWT구조](https://github.com/duho-kim/study/assets/155808974/1dfd7bf8-441e-44b7-b954-85ac4c5dd937)<br>
 *- JWT.io 사이트 캡쳐*
 
 - 위 사진과 같이 Header.Payload.Signature로 구성되어 있으며 각 부분은 점(.)으로 구분
